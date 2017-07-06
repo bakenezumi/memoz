@@ -1,6 +1,6 @@
-# Memoz
+# MemoZ
 
-**TODO: Add description**
+MemoZ run recursive while memoizing anonymous functions.
 
 ## Installation
 
@@ -13,7 +13,12 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/memoz](https://hexdocs.pm/memoz).
+## Example
 
+```elixir
+MemoZ.init(fn f -> fn
+  0 -> 0
+  1 -> 1
+  x -> f.(x-1) + f.(x-2)
+end end).(100) #=> 354224848179261915075
+```
