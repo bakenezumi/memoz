@@ -7,6 +7,7 @@ defmodule MemoZ do
     `init` to your anonymous recursive function, will make memoize.
 
     ## Example
+    
       MemoZ.init(fn f ->
         fn
           0 -> 0
