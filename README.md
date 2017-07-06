@@ -9,7 +9,7 @@ Adding `memoz` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:memoz, "~> 0.1.0"}]
+  [{:memoz, "~> 0.2.0"}]
 end
 ```
 
